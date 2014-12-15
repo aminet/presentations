@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>org.saltstack.salt-minion</string>
+       <key>Program</key>
+	       <string>/usr/local/bin/salt-minion</string>
+       <key>ProgramArguments</key>
+          <array>
+		  <string>-d</string>
+          </array>
+    <key>RunAtLoad</key>
+	<true/>
+    <key>KeepAlive</key>
+        <true/>
+    <key>SoftResourceLimits</key>
+        <dict>
+        <key>NumberOfFiles</key>
+        <integer>100000</integer>
+        </dict>
+    <key>HardResourceLimits</key>
+    	<dict>
+        <key>NumberOfFiles</key>
+        <integer>100000</integer>
+        </dict>
+    <key>EnvironmentVariables</key>
+        <dict>
+	<key>HOME</key>
+	<string>/var/root</string>
+	<key>PATH</key>
+	<string>/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+        <key>HOMEBREW_CASK_OPTS</key>
+	<string>--appdir=/Applications</string>
+        </dict>
+</dict>
+</plist>
